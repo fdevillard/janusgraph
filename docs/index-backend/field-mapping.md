@@ -45,6 +45,10 @@ with Mapping.STRING. If one wants to use another analyzer, it can be
 explicitly specified through a parameter : ParameterType.TEXT\_ANALYZER
 for Mapping.TEXT and ParameterType.STRING\_ANALYZER for Mapping.STRING.
 
+**Remark**: Custom analyzers are used for global queries only (like:
+`traversal().V().has(...)`). For other queries, the operators are
+implemented by JanusGraph and follow the default analyzer.
+
 #### For Elasticsearch
 
 The name of the analyzer must be set as parameter value.
